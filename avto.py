@@ -23,7 +23,6 @@ def parsing():
     soup = BeautifulSoup(responce, 'html.parser')
     blocks = soup.find_all('script') #all bloks on my page
 
-    #find toyota VII , информация находится внутри скрипта, а не внутри открытого тега! 
     toyota = blocks[1].text     #type-str мы взяли первое объявление и работаем с ним
     index = 0
     for car in blocks[1:29]:
@@ -43,7 +42,7 @@ def parsing():
    
     print()
 
-    # преобразовать строку в словарь для извлечения информации по ключю
+ 
 
     
 if str(zapros()) == '<Response [200]>' :
